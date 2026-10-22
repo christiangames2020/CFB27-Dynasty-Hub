@@ -1,0 +1,1 @@
+V27.1: Fix stale app.js/styles.css references from V23 to V27.1; refresh service worker cache name. Keeps V27 Playoff Picture sidebar, GameCenter, and V26 odds/spread model. This does not modify stored dynasty data. GitHub Pages: upload ALL extracted files to repository root, replacing matching files; verify index.html app.js and sw.js updated. Hard refresh after publish.
