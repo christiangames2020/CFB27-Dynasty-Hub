@@ -1,0 +1,1 @@
+Version 21: Conference Championship Results with year, conference, teams, final scores, winner, notes, edit-by-replacement, delete, and all-season history. Team Directory shows a #rank badge next to Top 25 schools for the selected season. Existing Firebase storage retained.

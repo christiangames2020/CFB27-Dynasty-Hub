@@ -1,0 +1,1 @@
+Version 20: Fixed undefined predictionWeek and heismanWeek variables that crashed Playoff Predictor and Heisman Watch. Added editable wins, losses and optional ties to Team Headquarters per team per season. Manual team record overrides schedule-calculated record when provided. Existing Firebase login and data preserved.

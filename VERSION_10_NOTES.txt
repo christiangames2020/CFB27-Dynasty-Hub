@@ -1,0 +1,1 @@
+Version 10: Added ESPN team logo mappings for 60+ additional FBS schools in conference standings and throughout the site. Missing or broken logo images now show a visible initials badge rather than a blank spot. All previous Version 9 functionality retained. Some schools or custom teams may use initials when no reliable logo URL is known.

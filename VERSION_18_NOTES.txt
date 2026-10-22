@@ -1,0 +1,1 @@
+Version 18: Rivalry game-by-game scores, per-year score entry, head-to-head results, streaks, biggest margin, points totals, Firebase autosave. Preserves Version 17 and earlier features.

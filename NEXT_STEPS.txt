@@ -1,0 +1,22 @@
+CFB 27 DYNASTY HUB — FIREBASE EDITION (V4)
+
+The Firebase web app configuration is included. No copy/paste of the SDK snippet is needed.
+
+IMPORTANT: Sync is NOT ACTIVE until you finish these account-owner steps:
+1. Firebase Console > Build > Authentication > Get started > Sign-in method > Email/Password > Enable.
+2. Authentication > Users > Add user: create YOUR OWN admin email and strong unique password. Enable MFA if supported by your chosen Firebase auth setup. NEVER send passwords to ChatGPT.
+3. Copy that user's UID (Authentication > Users table).
+4. Firebase Console > Build > Firestore Database > Create database. Choose PRODUCTION MODE, NOT TEST MODE. Select a region.
+5. Firestore Database > Rules: paste firestore.rules and replace REPLACE_WITH_ADMIN_UID with your own UID; click Publish. DO NOT publish rules with a placeholder or any broad allow-write rule.
+6. Host this entire cfb27-dynasty-hub folder via an HTTPS static host (e.g. Netlify Drop). The index.html file on your PC is for local preview; website hosting is needed for a reliable phone experience.
+7. In the hosted PC website, click FIREBASE ADMIN SIGN IN and use your own Firebase email/password. Save an edit to upload your dynasty.
+8. On your Samsung phone, visit your hosted URL followed by ?view=1. This hides edit controls and the Firestore rules prevent unauthenticated edits.
+
+IMPORTANT SAFETY:
+- This version uses PUBLIC READ. Anyone with the website address may see the dynasty. Private viewer authentication is not implemented.
+- Only the single Firebase UID named in your published Firestore rules may write. Hiding buttons is NOT security.
+- Do not use test mode or allow write: if true.
+- Do not send passwords, service-account JSON, or private keys.
+- If you already entered local data, use Settings > DOWNLOAD JSON BACKUP, then IMPORT JSON BACKUP on the hosted PC page AFTER signing in, to push it to cloud.
+- Do not edit simultaneously in multiple PC tabs. This early version is not conflict-safe or fully end-to-end tested.
+- The app does not import PS5 game save data automatically.

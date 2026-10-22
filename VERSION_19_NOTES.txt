@@ -1,0 +1,1 @@
+Version 19: Transfer Portal now includes an NIL amount field. NIL Spending shows committed transfer money by destination school, recruiting NIL separately, combined totals, and a transfer payment ledger. Data saves through existing Firebase system.\n

@@ -1,0 +1,1 @@
+Version 11 adds weekly Top 10 Most Watched, awards finalists/winners, seasonal offense/defense leaderboards, and manual playoff bracket from Week 10. Preserves V10 features. Always download JSON backup before deploy. Cloud sync depends on existing Firebase setup. No PS5 direct integration.

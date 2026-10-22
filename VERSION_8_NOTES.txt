@@ -1,0 +1,1 @@
+Version 8: NIL amount per recruit, NIL spending by team, and clickable team profiles for viewers and admins. No database rule changes required. Back up dynasty data before deploying.

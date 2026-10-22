@@ -1,0 +1,1 @@
+V26: automatic ESPN-style win probability plus automatic projected point spread on upcoming matchups; optional admin manual win probability and point spread override per scheduled game, reset to automatic; overrides saved in existing games array and synchronized via existing Firebase save. Spreads are illustrative model estimates, not real sportsbook lines.
