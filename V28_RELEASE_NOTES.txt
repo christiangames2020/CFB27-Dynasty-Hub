@@ -1,0 +1,7 @@
+V28 GameCenter and schedule navigation
+- Fixes FULL TEAM SCHEDULE buttons from GameCenter: opens selected team headquarters and full season schedule.
+- Adds side-by-side saved player season leaders for passing, rushing, receiving, sacks, tackles. Missing data displays —.
+- Adds ESPN-inspired last five completed games with green W, red L and GameCenter links.
+- Adds standings/record panel and corrects ranking badge to display only actual Top 25 poll ranks.
+- Updates cache identifiers to v280.
+- All data storage and Firestore configuration files preserved.
