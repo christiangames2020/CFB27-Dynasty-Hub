@@ -1,0 +1,10 @@
+CFB27 DYNASTY HUB — LOGIN UPDATE
+
+1. Extract this ZIP.
+2. Open Netlify and choose your existing site.
+3. Under Deploys, drag the extracted cfb27-dynasty-hub folder into the manual deploy area.
+4. Open the same netlify.app address, refresh the page, and click Admin sign in at bottom right.
+5. Sign in with your existing Firebase Authentication email and password. Never share the password.
+
+The website uses your existing Firestore rules and admin UID. Non-admin visitors cannot edit. Cloud sync requires internet and Firebase SDK scripts. Public viewing is enabled.
+IMPORTANT: The first admin save to Firestore may overwrite unsynced local data. Export a JSON backup first if you have existing data.

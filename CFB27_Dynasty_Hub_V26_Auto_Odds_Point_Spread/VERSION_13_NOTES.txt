@@ -1,0 +1,1 @@
+Version 13: Current year 2030 control; archive includes 2027-2030 and historical edit mode; preserves existing Firestore data. Sign in as admin and choose Settings & Backups > SET CURRENT SEASON TO 2030. Then Season Archive > select past year > EDIT THIS YEAR. Return to current season using banner.

@@ -1,0 +1,24 @@
+CFB 27 DYNASTY HUB — SIMPLE SETUP
+
+YOUR PC APP WORKS NOW (OFFLINE):
+1. Extract the ZIP.
+2. Open the cfb27-dynasty-hub folder.
+3. Double-click index.html.
+4. Enter your dynasty information and use Settings & Backups > Download JSON Backup.
+
+PHONE SYNC IS NOT LIVE YET.
+To sync the PC and Samsung you must authorize a cloud database and host the website.
+The package includes the code and security rules, but those services are not configured or deployed.
+
+FOR ONLINE SETUP (ONE-TIME):
+1. Go to https://supabase.com/dashboard and create a project under YOUR account.
+2. In Authentication > Users, create your admin user; use a unique strong password and enable MFA on your account.
+3. In SQL Editor, run supabase-setup.sql AFTER replacing REPLACE_WITH_YOUR_ADMIN_EMAIL with your own admin email.
+4. In Project Settings > API, find your Project URL and public/publishable/anon key. Paste these into cloud-config.js. NEVER use the secret/service_role key.
+5. Deploy the cfb27-dynasty-hub folder to https://app.netlify.com/drop and open the new https:// address on PC.
+6. Sign in as admin on PC, then add/edit an item to send it to the cloud. If you had local data, first export JSON from your original PC tab and import it after signing in on the hosted tab.
+7. On your Samsung, open the website URL with ?view=1 added to the end. Chrome > menu > Add to Home screen.
+
+SECURITY NOTE: the viewer is PUBLIC; anyone with the URL can READ the data. Only the designated admin may WRITE when Supabase security rules are correctly installed. Do not upload sensitive personal information. View-only UI alone is not a security boundary.
+
+Do not share your passwords, service_role keys, or private tokens in ChatGPT.

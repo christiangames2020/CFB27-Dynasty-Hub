@@ -1,0 +1,1 @@
+V24: ESPN-style win probability integrated into Scores & Schedule, Team Headquarters schedule, and Most Watched games without a separate sidebar navigation item. Predictions appear on upcoming games and expand inline. Keep V22/V23 backup before deploying.

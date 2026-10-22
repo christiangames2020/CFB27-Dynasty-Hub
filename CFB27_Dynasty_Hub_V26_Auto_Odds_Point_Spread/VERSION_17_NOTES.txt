@@ -1,0 +1,7 @@
+Version 17 — Team Headquarters
+- Franchise-style profiles for all directory schools, including custom schools
+- Team-specific, season-specific manual offensive, defensive, turnovers, sacks, interceptions, ratings and coaching data
+- Auto-save through existing Firebase cloud save
+- Team player leaders from Players & Stats and schedule from Scores & Schedule
+- Open by clicking school name or Open Headquarters button
+- Preserves existing seasons and other Version 16 features

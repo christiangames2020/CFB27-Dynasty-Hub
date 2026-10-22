@@ -1,0 +1,11 @@
+CFB 27 Dynasty Hub Version 16 — Final Six Features
+
+Adds: broadcast-style Playoff Prediction Center (12 seeds, week-by-week snapshots), Recruiting Class History, Dynasty Hall of Fame, Transfer Portal Tracker, Rivalry & Trophy Room, and Weekly Heisman Watch with movement.
+
+All entries save using the existing Firebase cloud save flow when signed in as admin. Each record is scoped to dynasty and season; weekly features also store their week. To fill 2027–2029, open Season Archive, select year, choose Edit This Year, then enter data in the new pages. Return to current season when finished.
+
+Preserves existing features, login and cloud config from Version 15. This ZIP is the whole deployable website: extract and upload the folder containing index.html to Netlify Deploys.
+
+Note: Playoff predictor quarterfinal, semifinal and final path labels are projection placeholders; official completed bracket remains under Playoff Bracket. No live game integration.
+
+Always verify after deployment that the admin is connected, 2030 is current, and a sample edit syncs to your phone.

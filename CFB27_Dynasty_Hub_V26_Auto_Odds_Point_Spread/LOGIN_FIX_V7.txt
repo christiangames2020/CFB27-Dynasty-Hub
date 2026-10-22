@@ -1,0 +1,1 @@
+Version 7 fixes login fields being disabled by the view-only rendering code. Only fields inside #app are disabled; the admin login dialog stays usable. Deploy this extracted folder to the existing Netlify site.

@@ -1,0 +1,18 @@
+/* Firebase-backed public viewer and single-admin editor. */
+(()=>{'use strict';
+const ADMIN_UID='MEDMp7unhWZDzKtc1eaPGQRuKUM2';
+let db,auth,admin=false,timer,hasRemote=false;
+const api={status:'CONNECTING…',canEdit:false,enabled:true,queueSave};window.CFB_CLOUD=api;
+function status(t){api.status=t;const el=document.getElementById('sync-status');if(el)el.textContent=t}
+function updateAuth(){api.canEdit=admin;window.CFB_VIEWER=!admin;document.getElementById('auth-button')?.replaceChildren(document.createTextNode(admin?'Sign out':'Admin sign in'));window.CFB_RENDER?.();}
+function queueSave(data){if(!admin||!db)return;clearTimeout(timer);timer=setTimeout(async()=>{try{status('SAVING…');await db.collection('dynasty_hub').doc('main').set({payload:data,updatedAt:firebase.firestore.FieldValue.serverTimestamp()});status('ADMIN · SYNCED')}catch(e){status('SAVE FAILED');alert('Cloud save failed. Download a JSON backup. '+e.message)}},700)}
+async function toggleLogin(){if(!auth)return alert('Firebase is not connected yet. Please reload.');if(admin){await auth.signOut();return}document.getElementById('auth-modal').showModal();requestAnimationFrame(()=>document.getElementById('auth-email').focus())}
+async function signIn(e){e.preventDefault();const button=document.getElementById('auth-submit');button.disabled=true;document.getElementById('auth-error').textContent='';try{const email=document.getElementById('auth-email').value.trim();const password=document.getElementById('auth-password').value;const result=await auth.signInWithEmailAndPassword(email,password);if(result.user.uid!==ADMIN_UID){await auth.signOut();throw Error('This account does not have administrator access.')}document.getElementById('auth-modal').close();document.getElementById('auth-password').value=''}catch(err){document.getElementById('auth-error').textContent=err.message}finally{button.disabled=false}}
+function start(){const b=document.createElement('button');b.id='auth-button';b.className='cloud-login';b.textContent='Admin sign in';b.onclick=toggleLogin;document.body.appendChild(b);
+const modal=document.createElement('dialog');modal.id='auth-modal';modal.className='auth-overlay';modal.innerHTML=`<form class="auth-panel" id="auth-form"><h2>Dynasty Hub Admin</h2><p>Sign in to edit and sync your dynasty. Visitors can only view.</p><label for="auth-email">Email</label><input id="auth-email" type="email" autocomplete="username" required><label for="auth-password">Password</label><input id="auth-password" type="password" autocomplete="current-password" required><p id="auth-error" role="alert"></p><div class="auth-actions"><button type="button" id="auth-cancel">Cancel</button><button type="submit" id="auth-submit">Sign in</button></div></form>`;document.body.appendChild(modal);document.getElementById('auth-cancel').onclick=()=>modal.close();document.getElementById('auth-form').onsubmit=signIn;
+try{if(!window.firebase||!window.CFB_FIREBASE_CONFIG)throw Error('Firebase libraries unavailable');firebase.initializeApp(window.CFB_FIREBASE_CONFIG);db=firebase.firestore();auth=firebase.auth();
+auth.onAuthStateChanged(u=>{admin=!!u&&u.uid===ADMIN_UID;status(admin?'ADMIN · CONNECTED':'PUBLIC · VIEW ONLY');updateAuth()});
+db.collection('dynasty_hub').doc('main').onSnapshot(snap=>{if(snap.exists){const data=snap.data()?.payload;if(data&&window.CFB_SET_DATA)window.CFB_SET_DATA(data);hasRemote=true;status(admin?'ADMIN · SYNCED':'PUBLIC · VIEW ONLY')}else{hasRemote=false;status(admin?'ADMIN · READY (NO CLOUD DATA)':'PUBLIC · NO CLOUD DATA')}},e=>{status('CLOUD READ FAILED');console.error(e)});
+}catch(e){status('FIREBASE ERROR');console.error(e);alert('Firebase connection error: '+e.message)}}
+window.addEventListener('load',start);
+})();

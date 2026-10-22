@@ -1,0 +1,1 @@
+Version 22: Conference championship history now grouped by conference in dedicated sports-network sections. Current season results shown in individual conference cards. Preserves prior results and Firebase structure. Bumped cache version to refresh installed desktop app.

@@ -1,0 +1,1 @@
+V25: Win probability automatically visible in scheduled games, team schedules and upcoming Most Watched games. No click needed. Adds FBS program strength priors for realistic incomplete-data odds; dynasty OVR and stats override priors. Existing sections retained. Baselines are estimates, not ESPN proprietary analytics.
