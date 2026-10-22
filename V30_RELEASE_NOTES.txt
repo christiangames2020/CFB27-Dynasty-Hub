@@ -1,0 +1,23 @@
+CFB 27 DYNASTY HUB V30 — VISUAL + PERFORMANCE POLISH
+
+Based on V29, retaining its storage keys and Firebase configuration.
+
+NEW:
+- Organized desktop sidebar into labeled sections with a live search filter.
+- Scrollable sidebar so all sections remain accessible on shorter displays.
+- Dynamic Season Archive label (no hard-coded 2030 cutoff in header).
+- Polished dark broadcast appearance, consistent dark GameCenter win-probability cards.
+- Improved keyboard focus indicators, accessible navigation labels, active-page indication.
+- 130 ms team directory search debounce to reduce excessive page rendering while typing.
+- Page error recovery instead of a completely blank section when a view throws.
+- Preserves sidebar scroll position between views.
+- Refreshed cache identifiers for GitHub Pages / installed app updates.
+
+No data schema migration, no deletion of history, and no changes to Firebase credentials.
+The existing app still requires Firebase admin sign-in for editing.
+
+VERIFY BEFORE REPLACING YOUR LIVE SITE:
+Export a JSON backup in Settings & Backups while signed in as admin.
+Upload ALL extracted files into the ROOT of your existing GitHub repo.
+Confirm the GitHub URL, not the old Netlify shortcut.
+Test all sidebar sections and your data before removing your previous backup.

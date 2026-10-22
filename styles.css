@@ -69,3 +69,43 @@ dialog.auth-overlay{position:fixed;inset:0;margin:auto;width:min(94vw,460px);max
 
 /* V28.1 matchup forecasts and game editor */
 .game-prediction-label{font-size:10px;letter-spacing:.09em;font-weight:800;color:#aebde8;margin:8px 0 4px}.inline-prediction{margin-top:8px}.gc-link{cursor:pointer}
+
+/* V30 · Broadcast polish, accessibility and navigation performance */
+:root{color-scheme:dark;--v30-border:#303b4e;--v30-accent:#e32646}
+html{scroll-behavior:smooth}body{background:radial-gradient(ellipse 80% 34% at 50% -12%,#26324b 0%,transparent 78%),#090c12}
+.top{background:linear-gradient(105deg,#840a22 0%,#b50924 55%,#57162c 100%);box-shadow:0 6px 25px #0004}
+.brand{letter-spacing:-.7px}.top-right{flex-wrap:wrap;justify-content:flex-end}
+.side{max-height:calc(100vh - 28px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#475269 #10141c;padding:14px 10px}
+.side-title{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;font-weight:900;color:#e9f0fa;padding:9px 11px 12px;border-bottom:1px solid #293444}
+.side-title small{margin-left:auto;color:#d6b475;font-size:10px}.live-dot{height:7px;width:7px;border-radius:50%;background:#42dba3;box-shadow:0 0 10px #42dba380}
+.nav-search{width:calc(100% - 12px);margin:12px 6px 8px;padding:10px 12px;border-radius:8px;background:#0a101a;border:1px solid #394457;color:#fff;font-size:12px;outline:none}
+.nav-search:focus{border-color:#e44967;box-shadow:0 0 0 3px #e4496722}
+.side .nav-group{padding-bottom:5px;border-bottom:1px solid #ffffff0c}.side .nav-group:last-of-type{border-bottom:0}
+.side .nav-group h4{font-size:9px;color:#9da9bc;letter-spacing:.15em;margin:17px 11px 8px}
+.side .nav{font-size:12px;padding:10px 12px;margin-bottom:2px;border-radius:7px;transition:background-color .12s ease,color .12s ease,transform .12s ease}
+.side .nav:hover{background:#283449;color:#fff;transform:translateX(2px)}.side .nav.active{background:linear-gradient(95deg,#bc1334,#812342);color:#fff;box-shadow:inset 3px 0 #ffb5c1}
+[hidden]{display:none!important}
+.panel,.gc-hero,.gc-feature,.feature-card{box-shadow:0 7px 26px #0002}
+.panel{border-color:var(--v30-border);background:linear-gradient(160deg,#161d29,#111722)}
+.panel .head{background:#ffffff04}.panel .body{line-height:1.55}
+.data tr{transition:background-color .1s ease}.data th{position:relative}
+.btn,.gc-link,.chip{transition:filter .14s ease,transform .14s ease,background-color .14s ease}
+.btn:active,.gc-link:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #ffbf72;outline-offset:2px}
+.page-title{font-size:clamp(25px,3vw,35px);line-height:1.15}.eyebrow{color:#f77e93}
+.gc-hero{background:linear-gradient(130deg,#15233a,#182943 70%,#241c31);border-color:#455b7d}
+.gc-feature{background:linear-gradient(145deg,#152035,#141c2c);border-color:#344863}
+/* The matchup prediction now matches the dark GameCenter instead of a white insert */
+.espn-matchup{background:linear-gradient(140deg,#1b2637,#121a28);color:#f2f6ff;border-color:#455269;box-shadow:0 10px 26px #0004}
+.espn-matchup-top,.espn-analytics,.espn-factor{border-color:#ffffff21}
+.espn-matchup-top small,.espn-matchup-team span,.espn-analytics,.espn-factors .muted,.espn-factor small{color:#b9c7da!important}
+.espn-donut{background:conic-gradient(#d64763 0 var(--away),#4a678a var(--away) 100%)}
+.espn-donut-inner{background:#172233}.espn-vs{color:#a9b9cc}
+.espn-factors summary{color:#e8d49e}
+.inline-prediction .espn-matchup{box-shadow:none}
+.gc-result-row:hover{background:#ffffff06}
+.school-logo{object-fit:contain}.school-label{max-width:100%}
+.content{min-height:60vh}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media(max-width:950px){.side{display:none}.mobile-nav{scrollbar-width:thin}.top-right .pill{max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+@media(max-width:580px){.top{align-items:flex-start}.top-right{gap:6px}.top-right .btn{font-size:10px;padding:7px 9px}.gc-feature,.gc-hero{padding:14px}.panel .body{padding:13px}.data td{padding:9px}.school-label{gap:5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
