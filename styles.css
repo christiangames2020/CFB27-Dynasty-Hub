@@ -66,3 +66,6 @@ dialog.auth-overlay{position:fixed;inset:0;margin:auto;width:min(94vw,460px);max
 
 /* V28 ESPN-inspired gamecenter */
 .gc-result-row{display:flex;align-items:center;gap:12px;padding:11px 5px;border-bottom:1px solid rgba(150,160,190,.2);flex-wrap:wrap}.gc-result-week{font-size:11px;color:#9ba9c6;min-width:48px;font-weight:800}.gc-result-opponent{flex:1;min-width:125px;font-weight:700}.gc-result-score{white-space:nowrap;font-weight:800}.gc-outcome{font-weight:900;padding:3px 6px;border-radius:4px}.gc-outcome-w{color:#22c55e;background:rgba(34,197,94,.13)}.gc-outcome-l{color:#fb5b63;background:rgba(239,68,68,.13)}.gc-outcome-t{color:#eab308;background:rgba(234,179,8,.12)}.gc-result-row .gc-link{font-size:10px}.gc-standing{display:grid;grid-template-columns:2fr 1.5fr .6fr .7fr;align-items:center;gap:12px;padding:12px;border-bottom:1px solid rgba(150,160,190,.2)}.gc-standing strong{font-size:17px}.gc-rank{display:inline-block;background:#b30c30;color:white;padding:3px 6px;border-radius:4px;font-size:12px;vertical-align:middle}@media(max-width:650px){.gc-standing{grid-template-columns:1fr 1fr}.gc-result-row .gc-link{width:100%}}
+
+/* V28.1 matchup forecasts and game editor */
+.game-prediction-label{font-size:10px;letter-spacing:.09em;font-weight:800;color:#aebde8;margin:8px 0 4px}.inline-prediction{margin-top:8px}.gc-link{cursor:pointer}

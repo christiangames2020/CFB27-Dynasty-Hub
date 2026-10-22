@@ -1,0 +1,1 @@
+V28.1 fixes: full team schedule navigation, predictions for every saved matchup (including pregame estimates for finals), scheduled-by-default new games, and EDIT/UPDATE existing games including status. Keeps V28 GameCenter leaders and last-five results. Data configuration unchanged.
